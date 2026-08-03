@@ -24,4 +24,4 @@ A step-by-step repository for learning materials data analysis and machine learn
 ## Run the Example
 
 ```bash
-python hello.py
+python 01_explore_alloy_data.py
