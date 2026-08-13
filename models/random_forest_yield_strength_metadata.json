@@ -1,0 +1,87 @@
+{
+  "model_name": "Random Forest Yield Strength Predictor",
+  "algorithm": "RandomForestRegressor",
+  "training_samples": 312,
+  "target_column": "yield strength",
+  "target_unit": "MPa",
+  "feature_unit": "wt%",
+  "feature_names": [
+    "c",
+    "mn",
+    "si",
+    "cr",
+    "ni",
+    "mo",
+    "v",
+    "nb",
+    "co",
+    "al",
+    "w",
+    "ti",
+    "n"
+  ],
+  "hyperparameters": {
+    "n_estimators": 500,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_features": 1.0,
+    "max_depth": null,
+    "random_state": 42
+  },
+  "feature_ranges": {
+    "c": {
+      "minimum": 0.0,
+      "maximum": 0.43
+    },
+    "mn": {
+      "minimum": 0.01,
+      "maximum": 3.0
+    },
+    "si": {
+      "minimum": 0.01,
+      "maximum": 4.75
+    },
+    "cr": {
+      "minimum": 0.01,
+      "maximum": 17.5
+    },
+    "ni": {
+      "minimum": 0.01,
+      "maximum": 21.0
+    },
+    "mo": {
+      "minimum": 0.02,
+      "maximum": 9.67
+    },
+    "v": {
+      "minimum": 0.0,
+      "maximum": 4.32
+    },
+    "nb": {
+      "minimum": 0.0,
+      "maximum": 2.5
+    },
+    "co": {
+      "minimum": 0.01,
+      "maximum": 20.1
+    },
+    "al": {
+      "minimum": 0.01,
+      "maximum": 1.8
+    },
+    "w": {
+      "minimum": 0.0,
+      "maximum": 9.18
+    },
+    "ti": {
+      "minimum": 0.0,
+      "maximum": 2.5
+    },
+    "n": {
+      "minimum": 0.0,
+      "maximum": 0.15
+    }
+  },
+  "evaluation_note": "The deployment model was retrained on all 312 samples. The previously locked test set produced MAE 78.83 MPa, RMSE 110.73 MPa, and R2 0.822.",
+  "limitation": "The model uses composition features only and does not include heat treatment, processing, microstructure, or test conditions."
+}
